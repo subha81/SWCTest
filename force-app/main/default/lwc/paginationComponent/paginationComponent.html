@@ -1,0 +1,16 @@
+<template>
+<lightning-card title="Pagination demo Account"  icon-name="custom:custom4">
+    <div class="slds-m-around_medium">
+     <template if:true={VisibleRecord}>
+      <template for:each={VisibleRecord} for:item="account">
+          <p key={account.Id}>{account.Name}</p>
+      </template>
+     </template>
+     <div slot="footer" class="slds-var-m-horizontal_medium">
+
+     <c-pagination records={totalaccount} onupdate={updateContactRecord}></c-pagination>
+
+     </div>
+     </div> 
+    </lightning-card>
+</template>
